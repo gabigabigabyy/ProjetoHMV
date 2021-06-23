@@ -14,7 +14,7 @@ export class SinaleirasComponent implements OnInit {
   @Input() status: string;
 
   constructor(private modalService: BsModalService) {
-    this.items = Array(15).fill(0);
+    this.items = Array(3).fill(0);
   }
  
   openModal(template: TemplateRef<any>) {

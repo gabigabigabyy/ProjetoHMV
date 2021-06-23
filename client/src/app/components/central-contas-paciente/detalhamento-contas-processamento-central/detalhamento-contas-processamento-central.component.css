@@ -1,14 +1,15 @@
 .mat-column-unidadeInternacao {
-    max-width: 84px;
-    min-width: 84px;
+    max-width: 70px;
+    min-width: 70px;
     padding-right: 10px;
   }
 
   .mat-column-atendimento {
-    max-width: 84px;
-    min-width: 84px;
+    max-width: 60px;
+    min-width: 60px;
+    text-align: center;
   }
-
+  
   .mat-column-paciente {
     max-width: 84px;
     min-width: 84px;
@@ -32,11 +33,12 @@
 }
 
   .mat-column-avisoCirurgia {
-    max-width: 40px;
-    min-width: 40px;
+    max-width: 50px;
+    min-width: 50px;
     padding-right: 5px;
     padding-left: 5px;
-    text-align: right;
+    text-align: left;
+    
   }
 
   .mat-column-nroRetornos {
@@ -44,7 +46,7 @@
     min-width: 58px;
     text-align: center;
   }
-
+  
   .mat-column-diasLocalAtual {
     max-width: 68px;
     min-width: 68px;
@@ -92,6 +94,8 @@
     max-width: 52px;
     min-width: 52px;
   }
+ 
+  
 
   @media screen and (max-width: 600px) {
     .mat-column-unidadeInternacao {
