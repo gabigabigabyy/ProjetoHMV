@@ -1,0 +1,101 @@
+.mat-column-tipoAtendimento {
+  max-width: 84px;
+  min-width: 84px;
+}
+
+.mat-column-idConvenio {
+  max-width: 68px;
+  min-width: 68px;
+  text-align: center;
+}
+
+.mat-column-avisoCirurgia {
+  max-width: 68px;
+  min-width: 68px;
+}
+
+.mat-column-dataAtendimento {
+  max-width: 84px;
+  min-width: 84px;
+}
+
+.mat-column-dataCirurgia {
+  max-width: 84px;
+  min-width: 84px;
+}
+
+.mat-column-dataAlta {
+  max-width: 84px;
+  min-width: 84px;
+}
+
+.mat-column-retornos {
+  max-width: 55px;
+  min-width: 55px;
+  text-align: center;
+}
+
+.mat-column-diasFim {
+  max-width: 34px;
+  min-width: 34px;
+  text-align: center;
+}
+
+.mat-column-diasLocalAtual {
+  max-width: 34px;
+  min-width: 34px;
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  .mat-column-tipoAtendimento {
+    display: none;
+  }
+  .mat-column-nomePaciente {
+    max-width: 34px;
+    min-width: 34px;
+  }
+  .mat-column-avisoCirurgia {
+    max-width: 8px;
+    min-width: 8px;
+    /* text-align: center; */
+  }
+  .mat-column-diasLocalAtual {
+    max-width: 10px;
+    min-width: 10px;
+    text-align: center;
+  }
+  .mat-column-idConvenio {
+    display: none;
+  }
+  .mat-column-convenio {
+    display: none;
+  }
+  .mat-column-centroCirurgico {
+    display: none;
+  }
+  .mat-column-dataAtendimento {
+    display: none;
+  }
+  .mat-column-dataCirurgia {
+    display: none;
+  }
+  .mat-column-dataAlta {
+    display: none;
+  }
+  .mat-column-nomeUsuario {
+    display: none;
+  }
+  .mat-column-retornos {
+    display: none;
+  }
+  .mat-column-diasFim {
+    display: none;
+  }
+  .mat-column-porteCirurgico {
+    display: none;
+  }
+  .mat-column-cirurgiaoPrincipal {
+    display: none;
+  }
+}

@@ -1,0 +1,32 @@
+<mat-sidenav-container class="flex-container">
+    <mat-sidenav class="sidenav" mode="side" opened fixedInViewport="true" fixedTopGap="64">
+
+        <button mat-button routerLink="/" matTooltip="Início" matTooltipPosition="right" #tooltip="matTooltip">
+            <mat-icon>home</mat-icon>
+        </button>
+        <button mat-button routerLink="/nucleoContasCirurgicas" matTooltip="Núcleo de Contas Cirurgicas"
+            matTooltipPosition="right" #tooltip="matTooltip">
+            <mat-icon>local_hospital</mat-icon>
+        </button>
+
+        <button mat-icon-button [matMenuTriggerFor]="centalContasPaciente" matTooltip="Central de Contas do Paciente"
+            matTooltipPosition="right" #tooltip="matTooltip">
+            <mat-icon>attach_money</mat-icon>
+        </button>
+
+        <mat-menu #centalContasPaciente="matMenu">
+            <button mat-menu-item routerLink="/centralContasPaciente">Central de Contas do Paciente</button>
+            <button mat-menu-item [matMenuTriggerFor]="painelDeMonitoramentoDeContasInternado">Painel de Monitoramento
+                de Contas
+                Internado</button>
+        </mat-menu>
+
+        <mat-menu #painelDeMonitoramentoDeContasInternado="matMenu">
+            <button mat-menu-item routerLink="/monitoramentoDeBoletinsDeSala">Monitoramento de Boletins de Sala</button>
+        </mat-menu>
+
+    </mat-sidenav>
+    <mat-sidenav-content class="content">
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,135 @@
+.mat-column-unidadeInternacao {
+    max-width: 84px;
+    min-width: 84px;
+    padding-right: 10px;
+  }
+
+  .mat-column-atendimento {
+    max-width: 84px;
+    min-width: 84px;
+  }
+
+  .mat-column-paciente {
+    max-width: 84px;
+    min-width: 84px;
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+
+  .mat-column-conta {
+    max-width: 52px;
+    min-width: 52px;
+    padding-right: 5px;
+    padding-left: 5px;
+    
+  }
+
+  .mat-column-avisoCirurgia {
+    max-width: 40px;
+    min-width: 40px;
+    padding-right: 5px;
+    padding-left: 5px;
+    text-align: right;
+  }
+
+  .mat-column-nroRetornos {
+    max-width: 58px;
+    min-width: 58px;
+    text-align: center;
+  }
+
+  .mat-column-diasLocalAtual {
+    max-width: 68px;
+    min-width: 68px;
+    text-align: center;
+  }
+
+  .mat-column-nomeUsuario {
+    max-width: 84px;
+    min-width: 84px;
+    padding-right: 14px;
+  }
+
+  .mat-column-dataInicial {
+    max-width: 70px;
+    min-width: 70px;
+  }
+
+  .mat-column-dataFinal {
+    max-width: 70px;
+    min-width: 70px;
+  }
+
+  .mat-column-dataAlta {
+    max-width: 70px;
+    min-width: 70px;
+  }
+
+  .mat-column-qtdDiasFim {
+    max-width: 34px;
+    min-width: 34px;
+  }
+
+  .mat-column-convenio {
+    max-width: 64px;
+    min-width: 64px;
+    padding-right: 20px;
+  }
+
+  .mat-column-valor {
+    max-width: 84px;
+    min-width: 84px;
+  }
+
+  .mat-column-status {
+    max-width: 52px;
+    min-width: 52px;
+  }
+
+  @media screen and (max-width: 600px) {
+    .mat-column-unidadeInternacao {
+      max-width: 34px;
+      min-width: 34px;
+    }
+    .mat-column-atendimento {
+      display: none;
+    }
+    .mat-column-paciente {
+      max-width: 34px;
+      min-width: 34px;
+    }
+    .mat-column-conta {
+      display: none;
+    }
+    .mat-column-nroRetornos {
+      display: none;
+    }
+    .mat-column-diasLocalAtual {
+      max-width: 34px;
+      min-width: 34px;
+    }
+    .mat-column-nomeUsuario {
+      display: none;
+    }
+    .mat-column-dataInicial {
+      display: none;
+    }
+    .mat-column-dataFinal {
+      display: none;
+    }
+    .mat-column-dataAlta {
+      display: none;
+    }
+    .mat-column-qtdDiasFim {
+      display: none;
+    }
+    .mat-column-convenio {
+      display: none;
+    }
+    .mat-column-valor {
+      display: none;
+    }
+    .mat-column-status {
+      display: none;
+    }
+  }

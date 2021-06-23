@@ -1,0 +1,128 @@
+<div class="mat-elevation-z8">
+
+  <span class="table-title">
+    <p>Detalhamento dos Avisos de Cirurgias em Conferência Técnica (P.1059)</p>
+  </span>
+
+  <form class="pesquisa-table">
+    <mat-form-field class="pesquisa-table-width">
+      <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Pesquisa">
+    </mat-form-field>
+  </form>
+  <div class="overflow-table">
+    <table mat-table [dataSource]="dataSource" matSort>
+
+      <!-- Tipo de Atendimento Column -->
+      <ng-container matColumnDef="tipoAtendimento">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Tipo de Atendimento </th>
+        <td mat-cell *matCellDef="let element"> {{element.tipoAtendimento}} </td>
+      </ng-container>
+
+      <!-- Nome do Paciente Column -->
+      <ng-container matColumnDef="nomePaciente">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Nome do Paciente </th>
+        <td mat-cell *matCellDef="let element"> {{element.nomePaciente}} </td>
+      </ng-container>
+
+      <!-- Código do Convênio Column -->
+      <ng-container matColumnDef="idConvenio">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Cód. do Convênio </th>
+        <td mat-cell *matCellDef="let element"> {{element.idConvenio}} </td>
+      </ng-container>
+
+      <!-- Convênio Column -->
+      <ng-container matColumnDef="convenio">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Convênio </th>
+        <td mat-cell *matCellDef="let element"> {{element.convenio}} </td>
+      </ng-container>
+
+      <!-- Aviso Cirurgia Column -->
+      <ng-container matColumnDef="avisoCirurgia">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Aviso Cirurgia </th>
+        <td mat-cell *matCellDef="let element"> {{element.avisoCirurgia}} </td>
+      </ng-container>
+
+      <!-- Centro Cirurgico Column -->
+      <ng-container matColumnDef="centroCirurgico">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Centro Cirurgico </th>
+        <td mat-cell *matCellDef="let element"> {{element.centroCirurgico}} </td>
+      </ng-container>
+
+      <!-- Data Atendimento Column -->
+      <ng-container matColumnDef="dataAtendimento">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Data Atendimento </th>
+        <td mat-cell *matCellDef="let element"> {{element.dataAtendimento | date:'dd/MM/yyyy'}} </td>
+      </ng-container>
+
+      <!-- Data Cirurgia Column -->
+      <ng-container matColumnDef="dataCirurgia">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Data Cirurgia </th>
+        <td mat-cell *matCellDef="let element"> {{element.dataCirurgia | date:'dd/MM/yyyy'}} </td>
+      </ng-container>
+
+      <!-- Data Alta Column -->
+      <ng-container matColumnDef="dataAlta">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Data Alta </th>
+        <td mat-cell *matCellDef="let element"> 
+          <span *ngIf="element.dataAlta == '0001-01-01T00:00:00'"></span>
+          <span *ngIf="element.dataAlta != '0001-01-01T00:00:00'">{{element.dataAlta | date:'dd/MM/yyyy'}}</span>
+        </td>
+      </ng-container>
+
+      <!-- Nome Usuário Column -->
+      <ng-container matColumnDef="nomeUsuario">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Nome Usuário </th>
+        <td mat-cell *matCellDef="let element"> {{element.nomeUsuario}} </td>
+      </ng-container>
+
+      <!-- Retornos Column -->
+      <ng-container matColumnDef="retornos">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Retornos </th>
+        <td mat-cell *matCellDef="let element"> {{element.retornos}} </td>
+      </ng-container>
+
+      <!-- Dias Fim Column -->
+      <ng-container matColumnDef="diasFim">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Dias Fim </th>
+        <td mat-cell *matCellDef="let element"> {{element.diasFim}} </td>
+      </ng-container>
+
+      <!-- Dias Local Atual Column -->
+      <ng-container matColumnDef="diasLocalAtual">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Dias Local Atual </th>
+        <td mat-cell *matCellDef="let element"> {{element.diasLocalAtual}} </td>
+      </ng-container>
+
+      <!-- Porte Cirurgico Column -->
+      <ng-container matColumnDef="porteCirurgico">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Porte Cirurgico </th>
+        <td mat-cell *matCellDef="let element"> {{element.porteCirurgico}} </td>
+      </ng-container>
+
+      <!-- cirurgião Principal Column -->
+      <ng-container matColumnDef="cirurgiaoPrincipal">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> cirurgião Principal </th>
+        <td mat-cell *matCellDef="let element"> {{element.cirurgiaoPrincipal}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+  <mat-spinner diameter="50" class="spinner" *ngIf=loading></mat-spinner>
+  <span class="no-data" *ngIf=noData>
+    <p>Não foram encontrados registros.</p>
+  </span>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 50]" showFirstLastButtons></mat-paginator>
+  <div class="button-generic">
+    <button (click)=close() mat-raised-button>
+      <mat-icon>west</mat-icon>
+      Voltar
+    </button>
+    <button (click)=exportAsXLSX() mat-raised-button *ngIf="!loading">
+      <mat-icon>download</mat-icon>
+      Download
+    </button>
+  </div>
+</div>

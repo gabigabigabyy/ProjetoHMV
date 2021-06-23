@@ -1,0 +1,31 @@
+table {
+    width: 100%;
+  }
+
+  .mat-column-local {
+    max-width: 120px;
+    min-width: 120px;
+  }
+
+  .mat-column-valor {
+    max-width: 84px;
+    min-width: 64px;
+    text-align: center;
+  }
+
+  .mat-column-quantidade {
+    max-width: 84px;
+    min-width: 64px;
+    text-align: center;
+  }
+
+  .mat-column-mediaDias {
+    max-width: 64px;
+    min-width: 64px;
+    text-align: center;
+  }
+
+  .red-collor {
+    color: red;
+    font-weight: 600;
+  }
