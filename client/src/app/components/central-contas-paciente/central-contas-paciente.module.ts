@@ -13,6 +13,7 @@ import { DetalhamentoTotalContasProcessamentoComponent } from './detalhamento-to
 import { DetalhamentoTotalDemaisOrigensComponent } from './detalhamento-total-demais-origens/detalhamento-total-demais-origens.component';
 import { SinaleirasModule } from 'src/app/shared/sinaleiras/sinaleiras.module';
 
+
 @NgModule({
   declarations: [
     CentralContasPacienteComponent, 
@@ -24,7 +25,8 @@ import { SinaleirasModule } from 'src/app/shared/sinaleiras/sinaleiras.module';
     DetalhamentoTotalComponent,
     DetalhamentoTotalContasProcessamentoComponent,
     DetalhamentoTotalDemaisOrigensComponent,
-    ConverterDataPipe
+    ConverterDataPipe,
+
   ],
   imports: [
     CommonModule,
