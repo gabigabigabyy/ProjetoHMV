@@ -5,6 +5,10 @@ table {
   .mat-column-local {
     min-width: 120px;
   }
+  td.mat-column-local{
+    padding-top: 10px;
+   }
+   
 
   .mat-column-valor {
     max-width: 84px;
@@ -27,4 +31,7 @@ table {
   .column-local-total {
     color: green;
     font-weight: 600;
+  }
+  .negrito{
+    text-align: right;
   }

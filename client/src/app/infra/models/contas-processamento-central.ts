@@ -15,4 +15,5 @@ export class ContasProcessamentoCentral {
     status: string
     quantidade: number
     avisoCirurgia: string
+    avisoCC:string
 }

@@ -10,6 +10,7 @@ import { DetalhamentoContasProcessamentoCentralService } from 'src/app/infra/ser
 import { DownloadService } from 'src/app/infra/services/download.service';
 import { HeaderService } from 'src/app/infra/services/header.service';
 
+
 @Component({
   selector: 'app-detalhamento-contas-processamento-central',
   templateUrl: './detalhamento-contas-processamento-central.component.html',
@@ -30,6 +31,7 @@ export class DetalhamentoContasProcessamentoCentralComponent implements OnInit {
     'unidadeInternacao',
     'atendimento',
     'avisoCirurgia',
+    'avisoCC',
     'paciente',
     'conta',
     'nroRetornos',
@@ -41,7 +43,9 @@ export class DetalhamentoContasProcessamentoCentralComponent implements OnInit {
     'qtdDiasFim',
     'convenio',
     'valor',
-    'status'
+    'status',
+    
+    
   ];
   @ViewChild(MatSort, { static: true }) sort: MatSort;
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
@@ -63,7 +67,7 @@ export class DetalhamentoContasProcessamentoCentralComponent implements OnInit {
 
     headerService.headerData.dataAtualizada = new Date();
     headerService.headerData.lastRouteUrl = this.currentRoute;
-    this.headerService.RefreshPage(this.currentRoute);
+    /* this.headerService.RefreshPage(this.currentRoute); */
   }
 
   ngOnInit() {
@@ -78,6 +82,7 @@ export class DetalhamentoContasProcessamentoCentralComponent implements OnInit {
   private loadDataSource() {
     this.showLoading();
     this.service.getLista(this.local).subscribe(list => {
+      list.pop();
       this.formatDates(list);
       this.dataSource.data = list;
       this.dataSource.sort = this.sort;
@@ -107,11 +112,13 @@ export class DetalhamentoContasProcessamentoCentralComponent implements OnInit {
   }
 
   public goCentralDeContasDePacientes() {
-    this.router.navigate(['/centralContasPaciente']);
+      this.router.navigate(['/centralContasPaciente']);
+  
   }
 
   getContas() {
     var contas = this.service.getLista(this.local).subscribe(contas => {
+      contas.pop();
       this.formatDates(contas);
       this.removeColumns(contas);
       this.listaContas = contas;
@@ -136,7 +143,10 @@ export class DetalhamentoContasProcessamentoCentralComponent implements OnInit {
   private removeColumns(lista: any) {
     lista.forEach(conta => {
       delete conta.status
-      delete conta.quantidade;
+      delete conta.quantidade
+      delete conta.tipo
+      delete conta.hint          
+     
     });
   }
 

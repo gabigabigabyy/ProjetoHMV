@@ -1,15 +1,19 @@
 .mat-column-unidadeInternacao {
-    max-width: 70px;
-    min-width: 70px;
+    max-width: 95px;
+    min-width: 95px;
     padding-right: 10px;
   }
-
-  .mat-column-atendimento {
+   .mat-column-atendimento {
     max-width: 60px;
     min-width: 60px;
-    text-align: center;
+    padding-right: 40px;
   }
-  
+  td.mat-column-atendimento {
+    max-width: 60px;
+    min-width: 60px;
+   text-align: center;
+  }
+
   .mat-column-paciente {
     max-width: 84px;
     min-width: 84px;
@@ -18,8 +22,8 @@
   }
 
   .mat-column-conta{
-    max-width: 52px;
-    min-width: 52px;
+    max-width: 45px;
+    min-width: 45px;
     padding-right: 5px;
     padding-left: 5px;
     
@@ -33,29 +37,41 @@
 }
 
   .mat-column-avisoCirurgia {
+    max-width: 40px;
+    min-width: 40px;
+    padding-right: 30px;
+    padding-left: 5px;
+    text-align: right;
+  }
+  .mat-column-avisoCC {
     max-width: 50px;
     min-width: 50px;
-    padding-right: 5px;
+    padding-right: 30px;
     padding-left: 5px;
-    text-align: left;
-    
+    text-align: right;
+  }
+  td.mat-column-avisoCC {
+    max-width: 30px;
+    min-width: 30px;
+    text-align: center;
   }
 
   .mat-column-nroRetornos {
-    max-width: 58px;
-    min-width: 58px;
+    max-width: 35px;
+    min-width: 35px;
     text-align: center;
   }
-  
+
   .mat-column-diasLocalAtual {
-    max-width: 68px;
-    min-width: 68px;
+    max-width: 35px;
+    min-width: 35px;
+    padding-left: 15px;
     text-align: center;
   }
 
   .mat-column-nomeUsuario {
-    max-width: 84px;
-    min-width: 84px;
+    max-width: 95px;
+    min-width: 95px;
     padding-right: 14px;
   }
 
@@ -70,14 +86,18 @@
   }
 
   .mat-column-dataAlta {
-    max-width: 70px;
-    min-width: 70px;
+    max-width: 50px;
+    min-width: 50px;
   }
 
   .mat-column-qtdDiasFim {
-    max-width: 34px;
-    min-width: 34px;
+    max-width: 35px;
+    min-width: 35px;
+    text-align: center;
+    
   }
+  
+
 
   .mat-column-convenio {
     max-width: 64px;
@@ -86,16 +106,14 @@
   }
 
   .mat-column-valor {
-    max-width: 84px;
-    min-width: 84px;
+    max-width: 45px;
+    min-width: 45px;
   }
 
   .mat-column-status {
     max-width: 52px;
     min-width: 52px;
   }
- 
-  
 
   @media screen and (max-width: 600px) {
     .mat-column-unidadeInternacao {

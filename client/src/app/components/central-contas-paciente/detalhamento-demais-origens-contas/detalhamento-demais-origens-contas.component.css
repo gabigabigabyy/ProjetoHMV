@@ -1,138 +1,163 @@
+.mat-column-unidadeInternacao {
+  max-width: 95px;
+  min-width: 95px;
+  padding-right: 10px;
+}
+ .mat-column-atendimento {
+  max-width: 60px;
+  min-width: 60px;
+  padding-right: 40px;
+}
+td.mat-column-atendimento {
+  max-width: 60px;
+  min-width: 60px;
+ text-align: center;
+}
+
+.mat-column-paciente {
+  max-width: 84px;
+  min-width: 84px;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.mat-column-conta{
+  max-width: 45px;
+  min-width: 45px;
+  padding-right: 5px;
+  padding-left: 5px;
+  
+ 
+}
+td.mat-column-conta{
+  color: blue;
+}
+.red{
+  color: red;
+}
+
+.mat-column-avisoCirurgia {
+  max-width: 40px;
+  min-width: 40px;
+  padding-right: 30px;
+  padding-left: 5px;
+  text-align: right;
+}
+
+.mat-column-nroRetornos {
+  max-width: 35px;
+  min-width: 35px;
+  text-align: center;
+}
+
+.mat-column-diasLocalAtual {
+  max-width: 35px;
+  min-width: 35px;
+  text-align: center;
+}
+
+.mat-column-nomeUsuario {
+  max-width: 95px;
+  min-width: 95px;
+  padding-right: 14px;
+}
+
+.mat-column-dataInicial {
+  max-width: 70px;
+  min-width: 70px;
+}
+
+.mat-column-dataFinal {
+  max-width: 70px;
+  min-width: 70px;
+}
+
+.mat-column-dataAlta {
+  max-width: 50px;
+  min-width: 50px;
+}
+
+.mat-column-qtdDiasFim {
+  max-width: 35px;
+  min-width: 35px;
+  text-align: center;
+  
+}
+
+
+
+.mat-column-convenio {
+  max-width: 64px;
+  min-width: 64px;
+  padding-right: 20px;
+}
+
+.mat-column-valor {
+  max-width: 45px;
+  min-width: 45px;
+}
+
+.mat-column-status {
+  max-width: 52px;
+  min-width: 52px;
+}
+
+@media screen and (max-width: 600px) {
   .mat-column-unidadeInternacao {
-    max-width: 84px;
-    min-width: 84px;
-    padding-right: 10px;
-  }
-
-  .mat-column-atendimento {
-    max-width: 84px;
-    min-width: 84px;
-  }
-
-  .mat-column-paciente {
-    max-width: 84px;
-    min-width: 84px;
-    padding-right: 5px;
-    padding-left: 5px;
-  }
-
-  .mat-column-conta {
-    max-width: 52px;
-    min-width: 52px;
-    padding-right: 5px;
-    padding-left: 5px;
-  }
-  td.mat-column-conta{
-    color: blue;
-  }
-
-  .mat-column-avisoCirurgia {
-    max-width: 40px;
-    min-width: 40px;
-    padding-right: 5px;
-    padding-left: 5px;
-    text-align: right;
-  }
-
-  .mat-column-nroRetornos {
-    max-width: 58px;
-    min-width: 58px;
-    text-align: center;
-  }
-
-  .mat-column-diasLocalAtual {
-    max-width: 68px;
-    min-width: 68px;
-    text-align: center;
-  }
-
-  .mat-column-nomeUsuario {
-    max-width: 84px;
-    min-width: 84px;
-    padding-right: 14px;
-  }
-
-  .mat-column-dataInicial {
-    max-width: 70px;
-    min-width: 70px;
-  }
-
-  .mat-column-dataFinal {
-    max-width: 70px;
-    min-width: 70px;
-  }
-
-  .mat-column-dataAlta {
-    max-width: 70px;
-    min-width: 70px;
-  }
-
-  .mat-column-qtdDiasFim {
     max-width: 34px;
     min-width: 34px;
   }
-
+  .mat-column-atendimento {
+    display: none;
+  }
+  .mat-column-paciente {
+    max-width: 34px;
+    min-width: 34px;
+  }
+  .mat-column-conta {
+    display: none;
+  }
+  .mat-column-nroRetornos {
+    display: none;
+  }
+  .mat-column-diasLocalAtual {
+    max-width: 34px;
+    min-width: 34px;
+  }
+  .mat-column-nomeUsuario {
+    display: none;
+  }
+  .mat-column-dataInicial {
+    display: none;
+  }
+  .mat-column-dataFinal {
+    display: none;
+  }
+  .mat-column-dataAlta {
+    display: none;
+  }
+  .mat-column-qtdDiasFim {
+    display: none;
+  }
   .mat-column-convenio {
-    max-width: 64px;
-    min-width: 64px;
-    padding-right: 20px;
+    display: none;
   }
-
   .mat-column-valor {
-    max-width: 84px;
-    min-width: 84px;
-    padding-right: 5px;
+    display: none;
   }
-
   .mat-column-status {
-    max-width: 52px;
-    min-width: 52px;
+    display: none;
   }
+  
+}
+.bi-file-earmark-medical-fill{
+  margin-left: 10%;
+  font-size: 2em;
+  color: #1565c0;
+  cursor: pointer;
 
-  @media screen and (max-width: 600px) {
-    .mat-column-unidadeInternacao {
-      max-width: 34px;
-      min-width: 34px;
-    }
-    .mat-column-atendimento {
-      display: none;
-    }
-    .mat-column-paciente {
-      max-width: 34px;
-      min-width: 34px;
-    }
-    .mat-column-conta {
-      display: none;
-    }
-    .mat-column-nroRetornos {
-      display: none;
-    }
-    .mat-column-diasLocalAtual {
-      max-width: 34px;
-      min-width: 34px;
-    }
-    .mat-column-nomeUsuario {
-      display: none;
-    }
-    .mat-column-dataInicial {
-      display: none;
-    }
-    .mat-column-dataFinal {
-      display: none;
-    }
-    .mat-column-dataAlta {
-      display: none;
-    }
-    .mat-column-qtdDiasFim {
-      display: none;
-    }
-    .mat-column-convenio {
-      display: none;
-    }
-    .mat-column-valor {
-      display: none;
-    }
-    .mat-column-status {
-      display: none;
-    }
-  }
+}
+.btn-link{
+  width: 2px, 2px;
+}
+

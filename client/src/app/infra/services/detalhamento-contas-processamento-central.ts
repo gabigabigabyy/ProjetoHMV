@@ -1,3 +1,4 @@
+import { nullSafeIsEquivalent } from '@angular/compiler/src/output/output_ast';
 import { Injectable } from '@angular/core';
 import { ContasProcessamentoCentral } from '../models/contas-processamento-central';
 import { BaseService } from './base.service';
@@ -16,7 +17,8 @@ export class DetalhamentoContasProcessamentoCentralService extends BaseService {
   }
 
   public getTotalContasProcessamento() {
-    return this.get<ContasProcessamentoCentral[]>('api/centralDeContasDePacientes/detalhesTotalContasProcessamento');
+    return this.get<ContasProcessamentoCentral[]>('api/centralDeContasDePacientes/detalhesTotalContasProcessamento')
+    
   }
 
   public getTotalContasDemaisOrigens() {

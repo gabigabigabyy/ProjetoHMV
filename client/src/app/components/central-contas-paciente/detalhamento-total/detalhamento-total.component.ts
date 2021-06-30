@@ -58,7 +58,7 @@ export class DetalhamentoTotalComponent implements OnInit {
 
     headerService.headerData.dataAtualizada = new Date();
     headerService.headerData.lastRouteUrl = this.router.url;
-    this.headerService.RefreshPage(this.router.url);
+    /* this.headerService.RefreshPage(this.router.url); */
   }
 
   ngOnInit() {

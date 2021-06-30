@@ -62,7 +62,7 @@ export class DetalhamentoDemaisOrigensContasComponent implements OnInit {
     this.currentRoute = "/detalhamentoDemaisOrigens/" + this.local;
     headerService.headerData.dataAtualizada = new Date();
     headerService.headerData.lastRouteUrl = this.currentRoute;
-    this.headerService.RefreshPage(this.currentRoute);
+    /* this.headerService.RefreshPage(this.currentRoute); */
   }
 
   ngOnInit() {
@@ -74,6 +74,7 @@ export class DetalhamentoDemaisOrigensContasComponent implements OnInit {
     this.showLoading();
 
     this.service.getDemaisContas(this.local).subscribe(list => {
+      list.pop();
       this.formatDates(list);
       this.dataSource.data = list;
       this.dataSource.sort = this.sort;
@@ -109,6 +110,7 @@ export class DetalhamentoDemaisOrigensContasComponent implements OnInit {
   getContas() {
 
     this.service.getDemaisContas(this.local).subscribe(contas => {
+      contas.pop();
       this.formatDates(contas);
       this.removeColumns(contas);
       this.listaContas = contas;
@@ -133,7 +135,9 @@ export class DetalhamentoDemaisOrigensContasComponent implements OnInit {
   private removeColumns(lista: any) {
     lista.forEach(conta => {
       delete conta.status
-      delete conta.quantidade;
+      delete conta.quantidade
+      delete conta.tipo
+      delete conta.hint;
     });
   }
 
